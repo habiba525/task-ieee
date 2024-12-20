@@ -4,37 +4,30 @@ using namespace std;
 
 int main()
 {
-    int rows=3,columns=3;
-int arr[rows][columns];
-cout<<"Enter the elements of the matrix [3][3]:"<<endl;
-for(int i=0;i<rows;i++){
-    for(int j=0;j<columns;j++){
-  cout<<"Enter element ["<<i+1<<","<<j+1<<"]:" ;
-        cin>>arr[i][j];
-        cout<<endl;
-    }
+int length=10;
+int arr[length];
+cout<<"Enter 10 values: ";
+for(int i=0;i<length;i++){
+    cin>>arr[i];
 }
-cout<<"The  matrix is: "<<endl;
-for(int i=0;i<rows;i++){
-    for(int j=0;j<columns;j++){
-        cout<<arr[i][j]<<" ";
-    }cout<<endl;
-}
-cout<<"The summation of each row is: "<<endl;
-for(int i=0;i<rows;i++){
-        int summation=0;
-    for(int j=0;j<columns;j++){
-        summation+=arr[i][j];
-        }
-        cout<< "The summation of row ("<<i+1<<")is: "<<summation<<endl;
-}
-cout<<"The product of each row is: "<<endl;
-for(int i=0;i<rows;i++){
-    int product=1;
-    for(int j=0;j<columns;j++){
-        product*=arr[i][j];
-    } cout<< "The product of row ("<<i+1<<")is: "<<product<<endl;
+cout<<"The values are: ";
+for(int i=0;i<length;i++){
+    cout<<arr[i]<<" ";
+}cout<<endl;
 
+cout<<"The values in reverse are: ";
+for(int i=length-1;i>=0;i--){
+    cout<<arr[i]<<" ";
+}cout<<endl;
+int summation=0;
+for(int i=0;i<length;i++){
+summation+=arr[i];
 }
-return 0;
+cout<<"The summation of the values is: "<<summation<<endl;
+int product=1;
+for(int i=0;i<length;i++){
+    product*=arr[i];
+}
+cout<<"The product of the values is: "<<product;
+    return 0;
 }
